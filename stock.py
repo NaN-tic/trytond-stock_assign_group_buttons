@@ -20,6 +20,3 @@ class Assign(metaclass=PoolMeta):
                     btn.states['invisible'] = invisible_shipment_assign_group
             partial_buttons.append(btn)
         cls.partial.buttons = partial_buttons
-
-    def transition_ignore(self):
-        return 'partial'
