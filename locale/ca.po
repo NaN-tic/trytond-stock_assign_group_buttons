@@ -1,0 +1,7 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:res.group,name:stock_shipment_assign_group"
+msgid "Stock Shipment Assign"
+msgstr "Botons assignar albarà"
