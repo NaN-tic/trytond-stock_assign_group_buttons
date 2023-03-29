@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+    <!-- stock.shipment.assign -->
+    <record model="res.group" id="stock_shipment_assign_group">
+        <field name="name">Stock Shipment Assign</field>
+    </record>
+    <record model="res.user-res.group" id="user_admin_stock_shipment_assign_group">
+        <field name="user" ref="res.user_admin"/>
+        <field name="group" ref="stock_shipment_assign_group"/>
+    </record>
+    </data>
+</tryton>
