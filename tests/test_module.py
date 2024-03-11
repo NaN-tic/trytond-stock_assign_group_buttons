@@ -12,7 +12,9 @@ class StockAssignGroupButtonsTestCase(ModuleTestCase):
     @with_transaction()
     def test_stock_assign_group_buttons(self):
         Assign = Pool().get('stock.shipment.assign', type='wizard')
-        btn_ignore, = [btn for btn in Assign.partial.buttons if btn.string == 'Ignore']
-        assert str(btn_ignore.states) == "{'invisible': Not(In(Id('stock_assign_group_buttons', 'stock_shipment_assign_group'), Get(Eval('context', {}), 'groups', [])))}"
+        btn_ignore, = [btn for btn in Assign.partial.buttons
+            if btn.string == 'Ignore']
+        assert str(btn_ignore.states) == "{'invisible': ~Eval('context', {}).get(" +\
+            "'groups', []).contains(Id('stock_assign_group_buttons', 'stock_shipment_assign_group'))}"
 
 del ModuleTestCase
